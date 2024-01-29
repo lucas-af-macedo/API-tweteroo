@@ -22,4 +22,8 @@ public class UserService {
     public UserModel createUser(UserModel user){
         return userRepository.save(user);
     }
+
+    public Optional<UserModel> findUserById(Long id){
+        return userRepository.findById(id);
+    }
 }
